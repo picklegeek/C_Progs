@@ -7,5 +7,5 @@ void main() {
 	for ( controlVar = 1; controlVar <= number; controlVar ++ ) {
 		factorial = factorial * controlVar;
 	}
-	printf ( "Factorial of %d is %d\n", number, factorial );
+	printf ( " %d ! is %d\n", number, factorial );
 }
