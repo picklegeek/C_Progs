@@ -1,32 +1,32 @@
 #include<stdio.h>
 
 void main() {
-	int arraySize, controlVar, controlVarI, controlVarJ, temp;
+	int s, v, v1, vj, temp;
 	printf ( "Enter the size of the array: " );
-	scanf ( "%d", &arraySize );
-	int array[arraySize];
-	for ( controlVar = 0; controlVar < arraySize; controlVar ++ ) {
-		scanf ( "%d", &array[controlVar] );
+	scanf ( "%d", &s );
+	int a[s];
+	for ( v = 0; v < s; v ++ ) {
+		scanf ( "%d", &a[v] );
 	}
 
 	printf ( "Unsorted array: \n" );
-	for ( controlVar = 0; controlVar < arraySize; controlVar ++ ) {
-		printf ( "%d\t", array[controlVar] );
+	for ( v = 0; v < s; v ++ ) {
+		printf ( "%d\t", a[v] );
 	}
 
-	for ( controlVarI = 0; controlVarI < arraySize - 1; controlVarI ++ ) {
-		for ( controlVarJ = controlVarI + 1; controlVarJ < arraySize; controlVarJ ++ ) {
-			if ( array[controlVarI] > array[controlVarJ] ) {
-				temp = array[controlVarI];
-				array[controlVarI] = array[controlVarJ];
-				array[controlVarJ] = temp;
+	for ( v1 = 0; v1 < s - 1; v1 ++ ) {
+		for ( vj = v1 + 1; vj < s; vj ++ ) {
+			if ( a[v1] > a[vj] ) {
+				temp = a[v1];
+				a[v1] = a[vj];
+				a[vj] = temp;
 			}
 		}
 	}
 
 	printf ( "\nSorted array: \n" );
-	for ( controlVar = 0; controlVar < arraySize; controlVar ++ ) {
-		printf ( "%d\t", array[controlVar] );
+	for ( v = 0; v < s; v ++ ) {
+		printf ( "%d\t", a[v] );
 	}
 	printf ( "\n" );
 }
